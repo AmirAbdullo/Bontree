@@ -1,0 +1,108 @@
+/* style.css */
+/* Basic styling and color palette */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #0b0c10;
+  color: #ffffff;
+}
+
+header {
+  background-color: #1f2833;
+  padding: 20px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a {
+  color: gold;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+footer {
+  background-color: #1f2833;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+  gap: 10px;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  background-color: gold;
+  color: black;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ffcc00;
+}
+
+#contact-info {
+  background-color: #1f2833;
+  padding: 30px;
+  color: white;
+  text-align: center;
+  border-top: 2px solid gold;
+}
+
+#contact-info a {
+  color: gold;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#contact-info a:hover {
+  text-decoration: underline;
+}
+.image-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap; /* allows stacking on small screens */
+}
+
+.image-row img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.image-row img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
