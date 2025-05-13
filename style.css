@@ -1,5 +1,6 @@
-/* style.css */
-/* Basic styling and color palette */
+/* ===========================================
+   Global Styles
+=========================================== */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -7,10 +8,16 @@ body {
   color: #ffffff;
 }
 
+/* ===========================================
+   Header and Navigation
+=========================================== */
 header {
-  background-color: #1f2833;
+  background: linear-gradient(90deg, #0b0c10 0%, #1f2833 50%, #0b0c10 100%);
   padding: 20px;
   text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 nav ul {
@@ -25,13 +32,25 @@ nav a {
   color: gold;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s;
 }
 
+nav a:hover {
+  color: #ffcc00;
+  text-decoration: underline;
+}
+
+/* ===========================================
+   Main Content Area
+=========================================== */
 main {
   padding: 20px;
   text-align: center;
 }
 
+/* ===========================================
+   Footer
+=========================================== */
 footer {
   background-color: #1f2833;
   text-align: center;
@@ -41,6 +60,9 @@ footer {
   width: 100%;
 }
 
+/* ===========================================
+   Contact Form
+=========================================== */
 form {
   display: flex;
   flex-direction: column;
@@ -70,6 +92,9 @@ button:hover {
   background-color: #ffcc00;
 }
 
+/* ===========================================
+   Contact Info Section (Bottom of Page)
+=========================================== */
 #contact-info {
   background-color: #1f2833;
   padding: 30px;
@@ -87,17 +112,21 @@ button:hover {
 #contact-info a:hover {
   text-decoration: underline;
 }
+
+/* ===========================================
+   Featured Image Section (Home Page)
+=========================================== */
 .image-row {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  padding: 20px;
+  gap: 20px;
   flex-wrap: wrap;
   text-align: center;
+  padding: 20px;
 }
 
 .image-box {
-  max-width: 250px;
+  width: 250px;
 }
 
 .image-box img {
@@ -111,8 +140,195 @@ button:hover {
   cursor: pointer;
 }
 
+/* ===========================================
+   Menu Grid Section
+=========================================== */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  background-color: #0b0c10;
+  color: gold;
+  padding: 40px;
+  gap: 30px;
+  text-align: left;
+  border-radius: 20px;
+  margin: 40px 20px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+}
 
-.image-row img:hover {
-  transform: scale(1.05);
-  cursor: pointer;
+.menu-column h3 {
+  font-size: 22px;
+  border-bottom: 1px solid gold;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.menu-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-column li {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+/* ===========================================
+   Embedded Google Map
+=========================================== */
+.map-frame {
+  width: 100%;
+  max-width: 800px;
+  display: block;
+  margin: 0 auto;
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+}
+/* ========== Responsive Design ========== */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .image-row,
+  .menu-grid {
+    flex-direction: column;
+    display: block;
+  }
+
+  .menu-grid {
+    padding: 20px;
+  }
+
+  .menu-column {
+    margin-bottom: 30px;
+  }
+
+  form {
+    width: 90%;
+  }
+}
+@media (max-width: 768px) {
+  .map-frame {
+    height: 200px;
+  }
+}
+@media (min-width: 600px) and (max-width: 991px) {
+  nav ul {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  form {
+    width: 80%;
+  }
+}
+@media (min-width: 992px) {
+  .menu-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .map-frame {
+    height: 300px;
+  }
+}
+.seasonal-events {
+  background-image: url("images/season-bg.png"); /* or your custom blurred image */
+  background-size: cover;
+  background-position: center;
+  padding: 50px 20px;
+  color: white;
+  text-align: center;
+  border-radius: 15px;
+  margin: 30px auto;
+  max-width: 900px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.seasonal-events h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.seasonal-events ul {
+  list-style: none;
+  padding: 0;
+  font-size: 18px;
+}
+.specials {
+  background-color: #1f2833;
+  color: gold;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 30px auto;
+  max-width: 600px;
+  text-align: center;
+}
+.about-content {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-section,
+.offer-section {
+  background-color: #1f2833;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.about-section h2,
+.offer-section h2 {
+  color: gold;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-size: 17px;
+}
+
+.offer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.offer-section li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.about-story {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: left;
+  line-height: 1.7;
+}
+.about-background {
+  background-image: url("images/about-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  padding-top: 100px;
+  color: white;
+}
+.brand-logo {
+  font-family: "Poppins", sans-serif;
+  color: gold;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 1px;
 }
